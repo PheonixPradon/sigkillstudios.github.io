@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Nunito:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Soft, dreamy palette inspired by GRIS/Neva */
+    --background: 40 30% 97%;
+    --foreground: 220 15% 25%;
+
+    --card: 40 25% 98%;
+    --card-foreground: 220 15% 25%;
+
+    --popover: 40 25% 98%;
+    --popover-foreground: 220 15% 25%;
+
+    /* Misty teal primary */
+    --primary: 180 35% 65%;
+    --primary-foreground: 40 30% 97%;
+
+    /* Soft peach secondary */
+    --secondary: 20 60% 92%;
+    --secondary-foreground: 220 15% 25%;
+
+    /* Sky blue muted */
+    --muted: 200 50% 92%;
+    --muted-foreground: 220 12% 45%;
+
+    /* Coral accent */
+    --accent: 10 55% 78%;
+    --accent-foreground: 220 15% 20%;
+
+    --destructive: 0 60% 60%;
+    --destructive-foreground: 40 30% 97%;
+
+    --border: 200 30% 88%;
+    --input: 200 30% 88%;
+    --ring: 180 35% 65%;
+
+    --radius: 1rem;
+
+    /* Custom palette extensions */
+    --cream: 40 30% 97%;
+    --sky: 200 55% 88%;
+    --peach: 20 65% 90%;
+    --teal: 180 30% 75%;
+    --gold: 45 55% 72%;
+    --coral: 10 55% 78%;
+    --sage: 140 25% 72%;
+    --mist: 210 40% 96%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(
+      135deg,
+      hsl(40 30% 97%) 0%,
+      hsl(200 55% 92%) 30%,
+      hsl(20 50% 93%) 60%,
+      hsl(180 30% 90%) 100%
+    );
+    --gradient-soft: linear-gradient(
+      180deg,
+      hsl(40 30% 97%) 0%,
+      hsl(200 40% 94%) 100%
+    );
+    --gradient-peach: linear-gradient(
+      135deg,
+      hsl(20 60% 94%) 0%,
+      hsl(40 30% 97%) 100%
+    );
+    --gradient-teal: linear-gradient(
+      180deg,
+      hsl(180 25% 92%) 0%,
+      hsl(40 30% 97%) 100%
+    );
+
+    /* Shadows */
+    --shadow-soft: 0 4px 30px -10px hsl(200 30% 70% / 0.3);
+    --shadow-card: 0 8px 40px -15px hsl(200 30% 60% / 0.2);
+    --shadow-glow: 0 0 60px hsl(180 35% 65% / 0.15);
+
+    /* Transitions */
+    --transition-slow: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-medium: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 20% 10%;
+    --foreground: 40 20% 95%;
+    --card: 220 18% 12%;
+    --card-foreground: 40 20% 95%;
+    --popover: 220 18% 12%;
+    --popover-foreground: 40 20% 95%;
+    --primary: 180 35% 55%;
+    --primary-foreground: 220 20% 10%;
+    --secondary: 20 40% 25%;
+    --secondary-foreground: 40 20% 95%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 200 20% 65%;
+    --accent: 10 45% 45%;
+    --accent-foreground: 40 20% 95%;
+    --destructive: 0 50% 40%;
+    --destructive-foreground: 40 20% 95%;
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 180 35% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+    @apply font-light tracking-wide;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-body {
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-soft {
+    background: var(--gradient-soft);
+  }
+
+  .bg-gradient-peach {
+    background: var(--gradient-peach);
+  }
+
+  .bg-gradient-teal {
+    background: var(--gradient-teal);
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes drift {
+  0%, 100% {
+    transform: translateX(0) translateY(0);
+  }
+  25% {
+    transform: translateX(10px) translateY(-5px);
+  }
+  50% {
+    transform: translateX(5px) translateY(-10px);
+  }
+  75% {
+    transform: translateX(-5px) translateY(-5px);
+  }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.6);
+}
