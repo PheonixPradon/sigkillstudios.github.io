@@ -21,7 +21,7 @@ const games: Game[] = [
     image: gameJpkk,
     description: "Relax, unwind, and challenge your mind with Jigsaw Puzzle: Kudaketa Kakera — a beautifully crafted puzzle game inspired by Japanese art, nature, and culture.",
     year: "2025",
-    status: "Early Access ->",
+    status: "Released ->",
     link: "https://play.google.com/store/apps/details?id=com.sigkillstudios.jigsawpuzzle"
   },
   {

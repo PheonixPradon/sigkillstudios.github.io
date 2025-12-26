@@ -45,8 +45,8 @@ const ContactSection = () => {
   }, []);
 
   const socialLinks = [
-    { name: "YouTube", icon: YouTubeIcon, href: "#" },
-    { name: "Play Store", icon: PlayStoreIcon, href: "#" },
+    { name: "YouTube", icon: YouTubeIcon, href: "https://www.youtube.com/@SigkillStudios" },
+    { name: "Play Store", icon: PlayStoreIcon, href: "https://play.google.com/store/apps/developer?id=Sigkill+Studios" },
   ];
 
   return (
