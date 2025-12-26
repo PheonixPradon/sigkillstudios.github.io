@@ -93,6 +93,8 @@ const ContactSection = () => {
               <a
                 key={social.name}
                 href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={cn(
                   "w-12 h-12 rounded-full flex items-center justify-center",
                   "bg-muted/50 text-muted-foreground",
